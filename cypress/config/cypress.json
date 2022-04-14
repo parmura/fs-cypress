@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://fruitshoppe.firebaseapp.com",
+  "chromeWebSecurity": false,
+  "viewportWidth": 1500,
+  "viewportHeight": 800,
+  "watchForFileChanges": false,
+  "execTimeout": 30000,
+  "experimentalSessionSupport": true
+}

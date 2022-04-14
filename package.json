@@ -1,0 +1,29 @@
+{
+  "name": "fullstory-qa-auto",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.5.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "cypress:open:test": "npx cypress open -b chrome --config-file cypress/config/cypress.json",
+    "reports:clean": "rm -R -f cypress/reports && rm -R -f mochawesome-report && mkdir cypress/reports",
+    "merge-reports": "mochawesome-merge mochawesome-report/*.json > cypress/reports/merged-report.json",
+    "generate-html": "npx marge cypress/reports/merged-report.json -f report -o  cypress/reports"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cross-spawn": "^7.0.2",
+    "cypress": "9.5.4",
+    "lodash": "^4.17.20",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.0.3",
+    "mochawesome-report-generator": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "resolve": "^1.19.0",
+    "spawn-sync": "^2.0.0"
+  },
+  "devDependencies": {}
+}
